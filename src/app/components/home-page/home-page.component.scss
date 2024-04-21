@@ -1,102 +1,13 @@
 .home {
-    // .container {
-    //     margin-right: 0 !important;
-    // }
-    .ezy__nav4 {
-        /* Bootstrap variables */
-        --bs-body-color: #000;
-        --bs-body-bg: rgb(255, 255, 255);
-      
-        /* Easy Frontend variables */
-        --ezy-theme-color-rgb: 13, 110, 253;
-    
-        background-color: black;
-    }
-    
-    .gray .ezy__nav4,
-    .ezy__nav4.gray {
-        --bs-body-bg: rgb(246, 246, 246);
-    }
-    
-    /* Dark Gray Block Style */
-    .dark-gray .ezy__nav4,
-    .ezy__nav4.dark-gray {
-        /* Bootstrap variables */
-        --bs-body-color: #ffffff;
-        --bs-body-bg: rgb(30, 39, 53);
-    }
-    
-    
-    /* Dark Block Style */
-    .dark .ezy__nav4,
-    .ezy__nav4.dark {
-        /* Bootstrap variables */
-        --bs-body-color: #ffffff;
-        --bs-body-bg: rgb(11, 23, 39);
-    }
     
     .ezy__nav4 .navbar-brand {
         font-weight: 800;
         font-size: 30px;
-        color: var(--bs-body-color);
+        color: #ffffff;
     }
-    
-    .ezy__nav4 .navbar-toggler {
-        border: none;
-        box-shadow: none !important;
-    }
-    
-    .ezy__nav4 .navbar-toggler>span {
-        display: flex;
-        align-items: center;
-        height: 32px;
-    }
-    
-    .ezy__nav4 .navbar-toggler>span>span {
-        position: relative;
-    }
-    
-    .ezy__nav4 .navbar-toggler>span>span,
-    .ezy__nav4 .navbar-toggler>span>span::before,
-    .ezy__nav4 .navbar-toggler>span>span::after {
-        height: 2px;
-        background-color: var(--bs-body-color);
-        width: 25px;
-        display: inline-block;
-        border-radius: 5px;
-        transition: all .35s ease-in-out;
-    }
-    
-    .ezy__nav4 .navbar-toggler>span>span::before,
-    .ezy__nav4 .navbar-toggler>span>span::after {
-        content: '';
-        position: absolute;
-        left: 0;
-    }
-    
-    .ezy__nav4 .navbar-toggler[aria-expanded="false"]>span>span::before {
-        top: 7px;
-    }
-    
-    .ezy__nav4 .navbar-toggler[aria-expanded="false"]>span>span::after {
-        bottom: 7px;
-    }
-    
-    .ezy__nav4 .navbar-toggler[aria-expanded="true"]>span>span {
-        background-color: transparent;
-    }
-    
-    .ezy__nav4 .navbar-toggler[aria-expanded="true"]>span>span::before {
-        top: 0;
-        transform: rotate(-45deg);
-    }
-    
-    .ezy__nav4 .navbar-toggler[aria-expanded="true"]>span>span::after {
-        bottom: 0;
-        transform: rotate(45deg);
-    }
+
     .ezy__nav4 .navbar-nav {
-        border-width: 2px; /* Adjust border width as needed */
+        border-width: 2px; 
         border-style: solid;
         border-image-source: linear-gradient(269.57deg, #7A87FB 0.72%, #FFD49C 99.22%);
         border-image-slice: 1;
@@ -123,35 +34,17 @@
     }
 
     .ezy__nav4 .navbar-nav .nav-link {
-        color: var(--bs-body-color);
+        color: #ffffff;
         opacity: .6;
     }
     
     .ezy__nav4 .navbar-nav .nav-link:hover,
     .ezy__nav4 .navbar-nav .nav-link:focus,
     .ezy__nav4 .navbar-nav .nav-link.active {
-        color: var(--bs-body-color);
+        color: #ffffff;
         opacity: 1;
     }
     
-    @media (min-width: 992px) {
-        .ezy__nav4 .navbar-nav .nav-link {
-            padding-right: 16px;
-            padding-left: 16px;
-        }
-    }
-    
-    .ezy__nav4 .btn {
-        border-radius: 10px;
-    }
-    .ezy__nav4 .btn-outline-light {
-        border-color: var(--bs-body-color);
-        color: var(--bs-body-color);
-    }
-    .ezy__nav4 .btn-outline-light:hover {
-        background-color: var(--bs-body-color);
-        color: var(--bs-body-bg);
-    }
     .resume-container{
          margin: 0 9rem;
          border-top:1px solid rgb(72 71 71);
@@ -301,6 +194,178 @@
             height: 9rem;
             width: 0;
         }
+    }
+    .resume-whatIDo {
+        display: flex;
+        justify-content: space-around;
+        margin:0 5rem;
+        position: relative;
+        gap:2.5rem;
+        &__child{
+            border:5px solid #ffffff;
+            height:30rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            border-radius: 8px;
+        }
+        .child1{
+            transform: rotate(-4deg);
+            background-color: #FBE699;
+        }
+        .child2{
+            transform: rotate(5.5deg);
+            background-color: #ADE2FF;
+        }
+        .child3{
+            transform: rotate(-5.5deg);
+            background-color: #FFD4F3;
+        }
+        &__pen {
+            background-color: #9DDCFF;
+            position: absolute;
+            top: 4rem;
+            right: -16px;
+            font-weight: 600;
+            font-size: 2rem;
+            padding: 0 0.8rem;
+        }
+        &__figma {
+            background-color: #FFD4F3;
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-weight: 600;
+            font-size: 2rem;
+            padding: 0 0.8rem;
+        }
+        &__webFlow {
+            background-color: #FBE699;
+            position: absolute;
+            top: 4rem;
+            right: -3.5rem;
+            font-weight: 600;
+            font-size: 2rem;
+            padding: 0 0.8rem;
+        }
+    }
+    .resume-projects {
+        display: flex;
+        margin: 0 8rem;
+        &__pic , &__pic2 {
+            flex: 1;
+            height: 30rem;
+            // background-image: url('../../../assets/travel-blog.jpeg');
+            background-size: cover; 
+            background-position: center;
+            border-radius: 30px;
+        }
+        &__pic {
+            background-image: url('../../../assets/travel-blog.jpeg');
+        }
+        &__pic2{
+            background-image: url('../../../assets/image4.jpeg');
+        }
+        &__edit, &__edit2 {
+            flex: 1;
+            height: 30rem;
+            // background-color: #C27808;
+            border-radius: 30px;
+            display: flex;
+            justify-content: space-evenly;
+            &__image1, &__image4 {
+                background-size: cover; 
+                background-position: center;
+                height:20rem;
+                width: 10rem;
+                margin-top:2rem;
+            }
+            &__image2, &__image5 {
+                background-size: cover; 
+                background-position: center;
+                height:20rem;
+                width: 10rem;
+                margin-top:6rem;
+            }
+            &__image3, &__image6 {
+                background-size: cover; 
+                background-position: center;
+                height:20rem;
+                width: 10rem;
+                margin-top:9rem;
+            }
+            &__image1 {
+                background-image: url('../../../assets/image1.png');
+            }  
+            &__image2 {
+                background-image: url('../../../assets/image2.png');
+            }  
+            &__image3 {
+                background-image: url('../../../assets/image3.png');
+            }  
+            &__image4 {
+                background-image: url('../../../assets/image5.png');
+            }  
+            &__image5 {
+                background-image: url('../../../assets//image6.png');
+            }  
+            &__image6 {
+                background-image: url('../../../assets/iamge7.png');
+            }
+        }
+        &__edit {
+            background-color: #C27808;
+        }
+        &__edit2{
+            background-color: #3FD669;
+        }
+        &__info{
+            flex:1;
+            display: flex;
+            align-items: center;
+            &__data {
+               color:white;
+               padding: 3rem;
+               &__title {
+                font-size: 1.5rem;
+                font-family: serif;
+               }
+               &__subtitle {
+                color:#E3E4E6;
+                font-size: 2rem;
+                opacity: 0.6;
+               }
+               &__says {
+                font-size: 2rem;
+               }
+               &__main{
+                font-size: 1.5rem;
+               }
+               &__viewContainer {
+                margin-top: 2rem;
+                &__view {
+                    border:1px solid gray;
+                    border-radius: 1rem;
+                    padding: 0.5rem;
+                }
+                
+               }
+            }
+        }
+    }
+    .resume-contact {
+     display: flex;
+     justify-content: center;
+      &__text {
+        color:white;
+        font-weight: 600;
+        font-size: 3rem;
+        max-width:40rem;
+     }
     }
   
 }
