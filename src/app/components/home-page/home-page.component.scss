@@ -52,6 +52,7 @@
          border-right:1px solid rgb(72 71 71);
          &__resume{
             border-bottom: 1px solid rgb(72 71 71);
+            position: relative;
             &__firstblock {
                 display: flex;
                 justify-content: center;
@@ -66,6 +67,26 @@
                 &__child2{
                     border-right: 1px solid rgb(72 71 71);
                 }
+            }
+            &__star1 {
+                position: absolute;
+                right: 12rem;
+                color: white;
+                bottom: -0.8rem;
+                font-size: 1.5rem;
+            }
+            &__star2 {
+                position: absolute;
+                top: -0.8rem;
+                color: white;
+                font-size: 1.5rem;
+            }
+            &__star3 {
+                position: absolute;
+                right: 23.8rem;
+                color: white;
+                bottom: -0.8rem;
+                font-size: 1.5rem;
             }
           }
           &__info {
@@ -93,7 +114,7 @@
                 justify-content: center;
                 margin-bottom: 1rem;
                 &__btn {
-                    width: 6rem;
+                    width: 10rem;
                     background: linear-gradient(269.57deg, #7A87FB 0.72%, #FFD49C 99.22%);
                     padding: 1rem;
                     border-radius: 2rem;
@@ -266,6 +287,9 @@
         }
         &__pic {
             background-image: url('../../../assets/travel-blog.jpeg');
+            background-size: cover;
+            background-position: top;
+            transition: background-position 1s ease;
         }
         &__pic2{
             background-image: url('../../../assets/image4.jpeg');
@@ -350,7 +374,10 @@
                 &__view {
                     border:1px solid gray;
                     border-radius: 1rem;
-                    padding: 0.5rem;
+                    padding: 0.5rem 2rem;
+                    background: linear-gradient(269.57deg, #BC3CD8 0.72%, #C54B8C 99.22%);
+                    font-size: 1.2rem;
+                    display: inline-block;
                 }
                 
                }
@@ -360,12 +387,67 @@
     .resume-contact {
      display: flex;
      justify-content: center;
+     flex-direction: column;
+     align-items: center;
+
       &__text {
         color:white;
         font-weight: 600;
         font-size: 3rem;
         max-width:40rem;
+        text-align: center;
+     }
+     &__email {
+        height:5rem;
+        width: 55vw;
+        border:2px solid white;
+        border-radius: 2rem;
+        color:white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__iconInput{
+            display: flex;
+            margin : 1rem;
+            &__icon {
+             background: #FFEAD5;
+             padding:0.9rem;
+             border-radius: 1rem;
+             width:4rem;
+             display: flex;
+             justify-content: center;
+             color: #F379D1;
+            }
+            &__input{
+             display: flex;
+             &__box{
+                border: none;
+                background: transparent;
+                outline: none;
+                font-size: 1.4rem;
+                box-shadow: none;
+                color: white;
+                width: 30rem;
+             }
+             .resume-contact__email__iconInput__input__box::placeholder {
+                color: white;
+              }
+            }
+        }
+        &__send{
+            padding:1rem;
+            background: #F379D1;
+            border-radius: 2rem;
+            text-align: center;
+            font-size: 1.3rem;
+            margin-right:1rem;
+            cursor: pointer;
+        }
+
      }
     }
-  
+  li {
+    cursor: pointer;
+  }
+
 }
